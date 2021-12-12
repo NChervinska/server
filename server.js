@@ -7,9 +7,9 @@ const employeeApiRoutes = require('../server/src/routes/api-employee-routes')
 const mealPlanApiRoutes = require('../server/src/routes/api-meal-plan-routers')
 const userApiRoutes = require('../server/src/routes/api-user-routers')
 
-const app = process.env.PORT || express();  
+const app = express();  
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const db = 'mongodb+srv://Anastasiia:qaz123@pethotels.d3hrb.mongodb.net/pet-hotels?retryWrites=true&w=majority';
 
 mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
